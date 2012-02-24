@@ -1,0 +1,27 @@
+!!!5
+html
+  head
+    script(src='pakmanaged.js')
+    link(rel='stylesheet', href='style.css')
+  body
+    form#js-login
+      input.js-user(type="text", placeholder="username")
+      input.js-pass(type="password", placeholder="password")
+      input.js-org(type="text", placeholder="organization")
+      input.js-submit(type="submit", value="Log In")
+
+    div
+      h2 Issues
+      #js-issues
+        .js-issue(draggable='true', data-issue-id='2808000')
+          header B
+          .count(data-col-moves='4') moves: 4
+          a.js-link(target='_blank', href='https://github.com/SpotterRF/spotter-todo/issues/59')
+            | [
+            span.js-number 59
+            | ]
+          span.js-title Power Savings
+          pre
+            code
+              .js-body.hidden
+                | Blah blah

@@ -1,0 +1,32 @@
+{
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info/)",
+  "name": "gitscrum-browser",
+  "description": "A browser client for gitscrum",
+  "version": "0.1.0",
+  "homepage": "https://github.com/coolaj86/gitscrum",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/gitscrum.git"
+  },
+  "main": "lib/index",
+  "lib": "lib",
+  "scripts": {
+    "test": "node tests"
+  },
+  "engines": {
+    "node": ">= 0.4"
+  },
+  "browserDependencies": {
+    "domready": "0.2.x",
+    "bonzo": "1.x",
+    "bean": "0.4.x",
+    "qwery": "3.x",
+    "forEachAsync": "2.x",
+    "json-storage": "1.x",
+    "pure": "2.x",
+    "ahr2": "2.x"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
