@@ -222,7 +222,7 @@
   }
 
   function filterAll() {
-    $('.js-issue').show();
+    $('.js-issue').removeClass('hidden');
     filterBySearch();
     filterByLabel();
     filterByRepo();
@@ -243,13 +243,13 @@
 
     function hideClosed(issue) {
       if (issue.closed_at) {
-        $('.js-issue[data-issue-id="' + issue.id + '"]').hide();
+        $('.js-issue[data-issue-id="' + issue.id + '"]').addClass('hidden');
       }
     }
 
     function matchesKeyword(issue) {
       if (!keyword.exec(issue.title) && !keyword.exec(issue.body)) {
-        $('.js-issue[data-issue-id="' + issue.id + '"]').hide();
+        $('.js-issue[data-issue-id="' + issue.id + '"]').addClass('hidden');
       }
     }
 
@@ -298,7 +298,7 @@
       });
 
       if (!hasAssignee) {
-        $('.js-issue[data-issue-id="' + issue.id + '"]').hide();
+        $('.js-issue[data-issue-id="' + issue.id + '"]').addClass('hidden');
       }
     });
   }
@@ -333,7 +333,7 @@
       });
 
       if (!hasRepo) {
-        $('.js-issue[data-issue-id="' + issue.id + '"]').hide();
+        $('.js-issue[data-issue-id="' + issue.id + '"]').addClass('hidden');
       }
     });
   }
@@ -364,10 +364,8 @@
         return -1 !== labels.indexOf(label.name);
       });
 
-      // var id = $('.js-issue')[3].dataset.issueId
-      // $('.js-issue[data-issue-id="' + id + '"]').hide();
       if (!hasLabel) {
-        $('.js-issue[data-issue-id="' + issue.id + '"]').hide();
+        $('.js-issue[data-issue-id="' + issue.id + '"]').addClass('hidden');
       }
     });
   }
@@ -378,12 +376,12 @@
       label.css('background-color', label.css('border-color'));
       label.css('border-color', '');
       label[0].dataset.selected = 'selected';
-      label.find('.js-unselect').show();
+      label.find('.js-unselect').removeClass('hidden');
     } else {
       label.css('border-color', label.css('background-color'));
       label.css('background-color', '');
       label[0].dataset.selected = '';
-      label.find('.js-unselect').hide();
+      label.find('.js-unselect').addClass('hidden');
     }
 
     filterAll();
@@ -397,12 +395,12 @@
       assignee.css('background-color', '#ffef74');
       assignee.css('border-color', '');
       assignee[0].dataset.selected = 'selected';
-      assignee.find('.js-unselect').show();
+      assignee.find('.js-unselect').removeClass('hidden');
     } else {
       assignee.css('border-color', '#ffef74');
       assignee.css('background-color', null);
       assignee[0].dataset.selected = '';
-      assignee.find('.js-unselect').hide();
+      assignee.find('.js-unselect').addClass('hidden');
     }
 
     filterAll();
@@ -416,12 +414,12 @@
       repo.css('background-color', 'gray');
       repo.css('border-color', '');
       repo[0].dataset.selected = 'selected';
-      repo.find('.js-unselect').show();
+      repo.find('.js-unselect').removeClass('hidden');
     } else {
       repo.css('border-color', '');
       repo.css('background-color', null);
       repo[0].dataset.selected = '';
-      repo.find('.js-unselect').hide();
+      repo.find('.js-unselect').addClass('hidden');
     }
 
     filterAll();
