@@ -10,29 +10,41 @@ html
       input.js-org(type="text", placeholder="organization")
       input(type="submit", value="Log In")
 
-    form#js-search-issues
-      input.js-keyword(type="text", placeholder="keyword")
-      ul#js-repos
-        li(data-repo-id="###").js-repo.tag
-          span.js-name Awesominator
-          button.js-unselect.float-right X
-      ul#js-labels
-        li(data-label-id="foo").js-label.tag
-          span.js-name Critical
-          button.js-unselect.float-right X
+    div#content
 
-    div
-      h2 Issues
-      #js-issues
-        .js-issue(draggable='true', data-issue-id='2808000')
-          .hidden.count(data-col-moves='4') moves: 4
-          header
-            a.js-link(target='_blank', href='https://github.com/SpotterRF/spotter-todo/issues/59')
-              | [
-              span.js-number 59
-              | ]
-          span.js-title Power Savings
-          pre
-            code
-              .js-body.hidden
-                | Blah blah
+      div.issues
+        h2 Issues
+        #js-issues
+          .js-issue(draggable='true', data-issue-id='2808000')
+            .hidden.count(data-col-moves='4') moves: 4
+            header
+              a.js-link(target='_blank', href='https://github.com/SpotterRF/spotter-todo/issues/59')
+                | [
+                span.js-number 59
+                | ]
+            span.js-title Everything is Borken
+            pre
+              code
+                .js-body.hidden
+                  | Heinous details
+
+      div.tags
+        form#js-search-issues
+          input.js-keyword(type="text", placeholder="keyword")
+        div.clear
+      div.tags
+        ul#js-repos
+          li(data-repo-name="FooBar").js-repo.tag
+            span.js-name FooBar
+            button.js-unselect.float-right X
+      div.tags
+        ul#js-labels
+          li(data-label-name="Critical").js-label.tag
+            span.js-name Critical
+            button.js-unselect.float-right X
+      div.tags
+        ul#js-assignees
+          li(data-assignee-login="SpongeBob").js-assignee.tag.assignee
+            img.thumb-photo.js-photo(src="https://secure.gravatar.com/avatar/0a8b345ddcfc5401f578c850442f1e1b.jpg")
+            span.js-login.float-left SpongeBob
+            button.js-unselect.float-right X
