@@ -62,18 +62,18 @@ dd {
   -o-transition: -o-transform 0.2s ease-out;
   -ms-transition: -ms-transform 0.2s ease-out;
 }
-#js-issues .js-issue.over,
-#columns-dragOver .js-issue.over,
-#columns-dragEnd .js-issue.over,
-#columns-almostFinal .js-issue.over {
+#js-issues .js-issue.over {
   border: 2px dashed #000;
 }
 #js-issues .js-issue.moving {
-  opacity: 0.25;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
   -ms-transform: scale(0.6);
   -o-transform: scale(0.6);
+}
+#js-issues .js-issue.xmoving {
+  opacity: 0.40;
+  position: absolute;
 }
 #js-issues .js-issue .count {
   padding-top: 15px;

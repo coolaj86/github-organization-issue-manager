@@ -8,18 +8,29 @@ html
       input.js-user(type="text", placeholder="username")
       input.js-pass(type="password", placeholder="password")
       input.js-org(type="text", placeholder="organization")
-      input.js-submit(type="submit", value="Log In")
+      input(type="submit", value="Log In")
+
+    form#js-search-issues
+      input.js-keyword(type="text", placeholder="keyword")
+      ul#js-repos
+        li(data-repo-id="###").js-repo.tag
+          span.js-name Awesominator
+          button.js-unselect.float-right X
+      ul#js-labels
+        li(data-label-id="foo").js-label.tag
+          span.js-name Critical
+          button.js-unselect.float-right X
 
     div
       h2 Issues
       #js-issues
         .js-issue(draggable='true', data-issue-id='2808000')
-          header B
-          .count(data-col-moves='4') moves: 4
-          a.js-link(target='_blank', href='https://github.com/SpotterRF/spotter-todo/issues/59')
-            | [
-            span.js-number 59
-            | ]
+          .hidden.count(data-col-moves='4') moves: 4
+          header
+            a.js-link(target='_blank', href='https://github.com/SpotterRF/spotter-todo/issues/59')
+              | [
+              span.js-number 59
+              | ]
           span.js-title Power Savings
           pre
             code
