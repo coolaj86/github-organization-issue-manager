@@ -15,3 +15,8 @@ Host it Yourself
  0. You must [register your application on github](https://github.com/account/applications) to use this [CORS / XHR2](http://developer.github.com/v3/#cross-origin-resource-sharing) app.
  0. Copy the files onto your web server (or run it from localhost)
  0. Done. That was all.
+
+Similar Services
+===
+
+  * <http://gissues.com>
