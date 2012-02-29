@@ -6295,7 +6295,15 @@ var global = Function("return this;")()
       $('body').delegate('.js-repo', 'click', selectRepo);
       $('body').delegate('.js-assignee', 'click', selectAssignee);
       $('body').delegate('.js-issue', 'click', showBody);
+      $('body').delegate('form#js-search-issues', 'submit', function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        selectKeyword();
+      });
       $('body').delegate('#js-search-issues .js-keyword', 'keyup', selectKeyword);
+      $('body').delegate('#js-login .js-cleardb', 'click', function (ev) {
+        localStorage.clear();
+      });
       $('body').delegate('form#js-login', 'submit', function (ev) {
         ev.preventDefault();
   
