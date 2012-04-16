@@ -126,6 +126,9 @@
         if (err) {
           console.error(url);
           console.error(err);
+
+          next();
+          return;
         }
         console.log(thingyName + ' for ' + repo.name + ':');
         // preserving the original ref
