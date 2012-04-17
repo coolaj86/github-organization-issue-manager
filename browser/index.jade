@@ -11,6 +11,13 @@ html
       input(type="submit", value="Log In")
       input.js-cleardb(type="button", value="Clear DB")
 
+    br
+    .search
+      form#js-search-issues
+        label Search:
+        input.js-keyword(type="text", placeholder="keyword")
+      div.clear
+
     div#content
 
       div.issues
@@ -29,22 +36,19 @@ html
                   | Heinous details
 
       div.tags
-        form#js-search-issues
-          input.js-keyword(type="text", placeholder="keyword")
-        div.clear
-      div.tags
-        ul#js-repos
-          li(data-repo-name="FooBar").js-repo.tag
-            span.js-name FooBar
-            button.hidden.js-unselect.float-right X
-      div.tags
-        ul#js-labels
-          li(data-label-name="Critical").js-label.tag
-            span.js-name Critical
-            button.hidden.js-unselect.float-right X
-      div.tags
-        ul#js-assignees
-          li(data-assignee-login="SpongeBob").js-assignee.tag.assignee
-            img.thumb-photo.js-photo(src="https://secure.gravatar.com/avatar/0a8b345ddcfc5401f578c850442f1e1b.jpg")
-            span.js-login.float-left SpongeBob
-            button.hidden.js-unselect.float-right X
+        div.repos
+          ul#js-repos
+            li(data-repo-name="FooBar").js-repo.tag
+              span.js-name FooBar
+              button.hidden.js-unselect.float-right X
+        div.labels
+          ul#js-labels
+            li(data-label-name="Critical").js-label.tag
+              span.js-name Critical
+              button.hidden.js-unselect.float-right X
+        div.assignees
+          ul#js-assignees
+            li(data-assignee-login="SpongeBob").js-assignee.tag.assignee
+              img.thumb-photo.js-photo(src="https://secure.gravatar.com/avatar/0a8b345ddcfc5401f578c850442f1e1b.jpg")
+              span.js-login.float-left SpongeBob
+              button.hidden.js-unselect.float-right X

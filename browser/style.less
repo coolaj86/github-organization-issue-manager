@@ -9,7 +9,7 @@
   width: 10em;
   border: solid 3px;
   width: 140px;
-  height: 20px;
+  min-height: 20px;
   padding: 2px;
   margin: 2px;
 }
@@ -23,15 +23,18 @@
 }
 
 .issues {
-  width: 850px;
-  float:left;
+  min-width: 300px;
+  max-width: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.tags {
+.repos, .labels, .assignees {
   width: 160px;
-  float:left;
   margin: 2px;
   padding: 2px;
+  vertical-align: top;
+  display: inline-block;
 }
 
 .clear {
@@ -49,4 +52,21 @@
   width: 32px;
   float: left;
   margin: 1px;
+}
+
+.tags {
+  display: inline-block;
+  min-width: 400px;
+  vertical-align: top;
+}
+
+.tag:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.3);
+}
+
+.tags ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
